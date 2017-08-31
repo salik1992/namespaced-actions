@@ -20,7 +20,7 @@ export default namespaced_actions('Cache', {
 
 ## Reducer
 ```javascript
-import Cache from '../actions/cache
+import Cache from '../actions/cache'
 
 const CacheReducer = (state, action) => {
     state = state || loadStored();
