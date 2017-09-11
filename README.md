@@ -1,11 +1,12 @@
 # Namespaced actions
 Action creator for flux to create namespaced actions without the need to specify action type.
+[NPM](https://www.npmjs.com/package/namespaced-actions)
 
 Example of use
 
 ## Actions
 ```javascript
-import namespaced_actions from 'namespaced-actions'
+import namespaced_actions from 'namespaced-actions';
 
 export default namespaced_actions('Cache', {
     filter: (fieldset, search) => ({ fieldset, search }),
@@ -20,7 +21,7 @@ export default namespaced_actions('Cache', {
 
 ## Reducer
 ```javascript
-import Cache from '../actions/cache'
+import Cache from 'actions/cache';
 
 const CacheReducer = (state, action) => {
     state = state || loadStored();
@@ -40,4 +41,11 @@ const CacheReducer = (state, action) => {
     }
 };
 export default CacheReducer;
+```
+
+## Dispatch
+```javascript
+import Cache from 'actions/cache';
+
+dispatch(Cache.controls.chooseNext(this.cacheFieldset));
 ```
